@@ -1,5 +1,6 @@
 package test
 
-class thing {
-
+class thing
+{
+println("I like penguins")
 }
