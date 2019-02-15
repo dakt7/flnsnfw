@@ -2,5 +2,5 @@ package test
 
 class thing
 {
-println("I like penguins !")
+println("I like penguins:)")
 }
