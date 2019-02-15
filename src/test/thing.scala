@@ -2,6 +2,6 @@ package test
 
 class thing {
 
-  val yang
+  val yang = 0
 
 }
