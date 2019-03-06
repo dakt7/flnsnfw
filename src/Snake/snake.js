@@ -14,7 +14,7 @@ class Snake {
     }
 
     update() {
-        var head = this.body[this.body.length-1].copy();
+        let head = this.body[this.body.length-1].copy();
         this.body.shift();
         head.x += this.xdir;
         head.y += this.ydir;
@@ -22,19 +22,19 @@ class Snake {
     }
 
     grow() {
-        var head = this.body[this.body.length-1].copy();
+        let head = this.body[this.body.length-1].copy();
         this.len++;
         this.body.push(head);
     }
 
     endGame() {
-        var x = this.body[this.body.length-1].x;
-        var y = this.body[this.body.length-1].y;
+        let x = this.body[this.body.length-1].x;
+        let y = this.body[this.body.length-1].y;
         if (x > w-1 || x < 0|| y > h-1 || y < 0){
             return true
         }
-        for (var i = 0; i < this.body.length-1; i++){
-            var part = this.body[i];
+        for (let i = 0; i < this.body.length-1; i++){
+            let part = this.body[i];
             if (part.x == x & part.y == y){
                 return true;
             }
@@ -45,8 +45,8 @@ class Snake {
 
 
     eat(pos) {
-        var x = this.body[this.body.length-1].x;
-        var y = this.body[this.body.length-1].y;
+        let x = this.body[this.body.length-1].x;
+        let y = this.body[this.body.length-1].y;
         if(x == pos.x && y == pos.y) {
             this.grow();
             return true;
@@ -55,7 +55,7 @@ class Snake {
     }
 
     show() {
-        for(var i = 0; i < this.body.length; i++) {
+        for(let i = 0; i < this.body.length; i++) {
             fill(0);
             noStroke();
             rect(this.body[i].x, this.body[i].y, 1, 1)
