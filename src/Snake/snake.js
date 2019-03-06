@@ -33,7 +33,7 @@ class Snake {
         if (x > w-1 || x < 0|| y > h-1 || y < 0){
             return true
         }
-        for (varc i = 0; i < this.body.length-1; i++){
+        for (var i = 0; i < this.body.length-1; i++){
             var part = this.body[i];
             if (part.x == x & part.y == y){
                 return true;
