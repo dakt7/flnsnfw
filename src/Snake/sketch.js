@@ -1,8 +1,8 @@
-let snake;
-let rez = 20;
-let food;
-let w;
-let h;
+var snake;
+var rez = 20;
+var food;
+var w;
+var h;
 
 function setup() {
     createCanvas(600, 600);
@@ -14,8 +14,8 @@ function setup() {
 }
 
 function foodLocation() {
-    let x = floor(random(w));
-    let y = floor(random(h));
+    var x = floor(random(w));
+    var y = floor(random(h));
     food = createVector(x, y);
 
 }
