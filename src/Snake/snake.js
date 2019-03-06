@@ -14,7 +14,7 @@ class Snake {
     }
 
     update() {
-        let head = this.body[this.body.length-1].copy();
+        var head = this.body[this.body.length-1].copy();
         this.body.shift();
         head.x += this.xdir;
         head.y += this.ydir;
@@ -22,14 +22,14 @@ class Snake {
     }
 
     grow() {
-        let head = this.body[this.body.length-1].copy();
+        var head = this.body[this.body.length-1].copy();
         this.len++;
         this.body.push(head);
     }
 
     endGame() {
-        let x = this.body[this.body.length-1].x;
-        let y = this.body[this.body.length-1].y;
+        var x = this.body[this.body.length-1].x;
+        var y = this.body[this.body.length-1].y;
         if (x > w-1 || x < 0|| y > h-1 || y < 0){
             return true
         }
@@ -45,8 +45,8 @@ class Snake {
 
 
     eat(pos) {
-        let x = this.body[this.body.length-1].x;
-        let y = this.body[this.body.length-1].y;
+        var x = this.body[this.body.length-1].x;
+        var y = this.body[this.body.length-1].y;
         if(x == pos.x && y == pos.y) {
             this.grow();
             return true;
@@ -55,7 +55,7 @@ class Snake {
     }
 
     show() {
-        for(let i = 0; i < this.body.length; i++) {
+        for(var i = 0; i < this.body.length; i++) {
             fill(0);
             noStroke();
             rect(this.body[i].x, this.body[i].y, 1, 1)
