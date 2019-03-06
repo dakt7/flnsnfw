@@ -29,8 +29,7 @@ function keyPressed() {
         snake.setDir(0, 1);
     } else if (keyCode === UP_ARROW) {
         snake.setDir(0, -1);
-    }
-    else if (key == ' ') {
+    } else if (key == ' ') {
         snake.grow();
     }
 
