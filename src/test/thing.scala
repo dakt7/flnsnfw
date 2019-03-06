@@ -6,5 +6,5 @@ class thing {
   val dak = 2
   val ken = 3
   val dog = 0
-
+  val cat = 0
 }
