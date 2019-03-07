@@ -48,7 +48,7 @@ class Snake {
 
     }
 
-    //the position of the body
+    //eat is the process of eating when the snake hits the food the length of the snake will grow
     eat(pos) {
         let x = this.body[this.body.length-1].x;
         let y = this.body[this.body.length-1].y;
