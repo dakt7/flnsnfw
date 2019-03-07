@@ -4,15 +4,21 @@ var food;
 var w;
 var h;
 
+//creates the area of the map
 function setup() {
     createCanvas(600, 600);
     w = floor(width / rez);
     h = floor(height / rez);
     frameRate(10);
+
+    // places the snake into the map
     snake = new Snake();
+
+    //places the food unto the map
     foodLocation();
 }
 
+//generates food into random positions of the map
 function foodLocation() {
     var x = floor(random(w));
     var y = floor(random(h));
@@ -20,6 +26,7 @@ function foodLocation() {
 
 }
 
+//uses the arrow keys to move the snake
 function keyPressed() {
     if(keyCode === LEFT_ARROW) {
         snake.setDir(-1, 0);
@@ -35,10 +42,11 @@ function keyPressed() {
 
 }
 
-
-
+//
 function draw() {
+    //resolution of the snake
     scale(rez);
+    //resolution for the background
     background(220);
     if (snake.eat(food)) {
         foodLocation();
