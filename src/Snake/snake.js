@@ -49,7 +49,7 @@ class Snake {
     }
 
     //the position of the body
-    /*eat(pos) {
+    eat(pos) {
         let x = this.body[this.body.length-1].x;
         let y = this.body[this.body.length-1].y;
         if(x == pos.x && y == pos.y) {
@@ -57,7 +57,7 @@ class Snake {
             return true;
         }
         return false;
-    }*/
+    }
 
     //show
     show() {
