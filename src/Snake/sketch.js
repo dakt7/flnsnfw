@@ -4,8 +4,9 @@ var food;
 var w;
 var h;
 
+
 function setup() {
-    createCanvas(600, 600);
+    createCanvas(700, 700);
     w = floor(width / rez);
     h = floor(height / rez);
     frameRate(10);
@@ -35,13 +36,12 @@ function keyPressed() {
 
 }
 
-
-
 function draw() {
     scale(rez);
     background(220);
     if (snake.eat(food)) {
         foodLocation();
+
     }
     snake.update();
     snake.show();
@@ -49,12 +49,12 @@ function draw() {
 
     if (snake.endGame()) {
         print("END GAME");
-        background(255, 0, 0);
+        background(51, 51, 255);
         noLoop();
     }
 
 
     noStroke();
-    fill(255, 0, 0);
+    fill(51, 51, 255);
     rect(food.x, food.y, 1, 1);
 }
