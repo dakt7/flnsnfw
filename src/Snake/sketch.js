@@ -36,10 +36,7 @@ function keyPressed() {
         snake.setDir(0, 1);
     } else if (keyCode === UP_ARROW) {
         snake.setDir(0, -1);
-    } else if (key == ' ') {
-        snake.grow();
     }
-
 }
 
 //
@@ -57,12 +54,10 @@ function draw() {
 
     if (snake.endGame()) {
         print("END GAME");
-        background(255, 0, 0);
+        background(0, 0, 255);
         noLoop();
     }
-
-
     noStroke();
-    fill(255, 0, 0);
+    fill(0, 0, 255);
     rect(food.x, food.y, 1, 1);
 }
