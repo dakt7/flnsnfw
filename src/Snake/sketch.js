@@ -37,6 +37,15 @@ function keyPressed() {
     } else if (keyCode === UP_ARROW) {
         snake.setDir(0, -1);
     }
+    if(keyCode === 65) {
+        snake.setDir(-1, 0);
+    } else if (keyCode === 68) {
+        snake.setDir(1, 0);
+    } else if (keyCode === 83) {
+        snake.setDir(0, 1);
+    } else if (keyCode === 87) {
+        snake.setDir(0, -1);
+    }
 }
 
 //
