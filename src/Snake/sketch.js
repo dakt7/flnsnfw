@@ -103,7 +103,7 @@ function keyPressed() {
 
 //
 function draw() {
-    //resolution of the snake
+    //resolution of the snakes
     scale(rez);
     //resolution for the background
     background(220);
