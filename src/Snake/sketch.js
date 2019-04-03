@@ -2,6 +2,9 @@ var snake;
 var rez = 20;
 var food;
 var food2;
+var food3;
+var food4;
+var food5;
 var w;
 var h;
 
@@ -18,6 +21,9 @@ function setup() {
     //places the food unto the map
     foodLocation();
     foodLocation2();
+    foodLocation3();
+    foodLocation4();
+    foodLocation5();
 }
 
 function secondFood() {
@@ -25,6 +31,9 @@ function secondFood() {
     var y = floor(random(h));
     food = createVector(x, y);
     food2 = createVector(x, y);
+    food3 = createVector(x, y);
+    food4 = createVector(x, y);
+    food5 = createVector(x, y);
 }
 
 //generates food into random positions of the map
@@ -41,6 +50,26 @@ function foodLocation2() {
 
 }
 
+function foodLocation3() {
+    var x = floor(random(w));
+    var y = floor(random(h));
+    food3 = createVector(x, y);
+
+}
+
+function foodLocation4() {
+    var x = floor(random(w));
+    var y = floor(random(h));
+    food4 = createVector(x, y);
+
+}
+
+function foodLocation5() {
+    var x = floor(random(w));
+    var y = floor(random(h));
+    food5 = createVector(x, y);
+
+}
 //uses the arrow keys to move the snake
 function keyPressed() {
     if(keyCode === LEFT_ARROW) {
@@ -75,6 +104,15 @@ function draw() {
     else if(snake.eat(food2)){
         foodLocation2();
     }
+    else if(snake.eat(food3)){
+        foodLocation3();
+    }
+    else if(snake.eat(food4)){
+        foodLocation4();
+    }
+    else if(snake.eat(food5)){
+        foodLocation5();
+    }
     snake.update();
     snake.show();
 
@@ -88,6 +126,9 @@ function draw() {
     fill(0, 0, 255);
     rect(food.x, food.y, 1, 1);
     rect(food2.x, food2.y, 1, 1);
+    rect(food3.x, food3.y, 1, 1);
+    rect(food4.x, food4.y, 1, 1);
+    rect(food5.x, food5.y, 1, 1);
 
 
 }
