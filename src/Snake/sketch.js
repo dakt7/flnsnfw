@@ -16,8 +16,7 @@ function setup() {
 
     //places the food unto the map
     foodLocation();
-    foodLocation2();
-    foodLocation();
+
 }
 
 //generates food into random positions of the map
@@ -25,12 +24,7 @@ function foodLocation() {
     var x = floor(random(w));
     var y = floor(random(h));
     food = createVector(x, y);
-}
 
-function foodLocation2() {
-    var x = floor(random(w));
-    var y = floor(random(h));
-    car = createVector(x, y);
 }
 
 //uses the arrow keys to move the snake
@@ -76,6 +70,4 @@ function draw() {
     noStroke();
     fill(0, 0, 255);
     rect(food.x, food.y, 1, 1);
-    rect(car.x, car.y, 1, 1);
-
 }
