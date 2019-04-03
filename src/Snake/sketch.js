@@ -72,23 +72,61 @@ function foodLocation5() {
 }
 //uses the arrow keys to move the snake
 function keyPressed() {
-    if(keyCode === LEFT_ARROW) {
-        snake.setDir(-1, 0);
-    } else if (keyCode === RIGHT_ARROW) {
-        snake.setDir(1, 0);
-    } else if (keyCode === DOWN_ARROW) {
-        snake.setDir(0, 1);
-    } else if (keyCode === UP_ARROW) {
-        snake.setDir(0, -1);
+    if (snake.xdir === 1) {
     }
-    if(keyCode === 65) {
-        snake.setDir(-1, 0);
-    } else if (keyCode === 68) {
-        snake.setDir(1, 0);
-    } else if (keyCode === 83) {
-        snake.setDir(0, 1);
-    } else if (keyCode === 87) {
-        snake.setDir(0, -1);
+    else {
+        if(keyCode === LEFT_ARROW) {
+            snake.setDir(-1,0);
+        }
+    }
+    if (snake.xdir === -1) {
+    }
+    else {
+        if (keyCode === RIGHT_ARROW) {
+            snake.setDir(1, 0);
+        }
+    }
+    if (snake.ydir === -1) {
+    }
+    else {
+        if (keyCode === DOWN_ARROW) {
+            snake.setDir(0, 1);
+        }
+    }
+    if (snake.ydir === 1) {
+    }
+    else {
+        if (keyCode === UP_ARROW) {
+            snake.setDir(0, -1);
+        }
+    }
+    if (snake.xdir === 1) {
+    }
+    else {
+        if(keyCode === 65) {
+            snake.setDir(-1,0);
+        }
+    }
+    if (snake.xdir === -1) {
+    }
+    else {
+        if (keyCode === 68) {
+            snake.setDir(1, 0);
+        }
+    }
+    if (snake.ydir === -1) {
+    }
+    else {
+        if (keyCode === 83) {
+            snake.setDir(0, 1);
+        }
+    }
+    if (snake.ydir === 1) {
+    }
+    else {
+        if (keyCode === 87) {
+            snake.setDir(0, -1);
+        }
     }
 }
 
