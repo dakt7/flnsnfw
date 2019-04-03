@@ -3,7 +3,7 @@ class Snake {
     //constructor contains the size of the snake "body"
     constructor() {
         this.body = [];
-        this.body[0] = createVector(floor(w/2), floor(h/2));
+        this.body[0] = createVector(floor(random(w)), floor(random(h)));
         this.xdir = 0;
         this.ydir = 0;
         this.len = 0;
