@@ -6,7 +6,7 @@ var h;
 
 //creates the area of the map
 function setup() {
-    createCanvas(600, 600);
+    createCanvas(1800, 600);
     w = floor(width / rez);
     h = floor(height / rez);
     frameRate(10);
