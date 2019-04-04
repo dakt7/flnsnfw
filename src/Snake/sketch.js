@@ -116,6 +116,7 @@ function keyPressed() {
     if (keyCode === 32) {
         snake.body.shift()
         frameRate(50)
+        seconds = 0
     }
 }
 
