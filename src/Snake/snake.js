@@ -45,7 +45,6 @@ class Snake {
             }
         }
         return false;
-
     }
 
     //the position of the body
@@ -59,10 +58,28 @@ class Snake {
         return false;
     }
 
+    eat2(pos) {
+        let x = this.body[this.body.length-1].x;
+        let y = this.body[this.body.length-1].y;
+        if(x == pos.x && y == pos.y) {
+            this.grow();
+            return true;
+        }
+        return false;
+    }
+
     //show
     show() {
         for(let i = 0; i < this.body.length; i++) {
             fill(0);
+            noStroke();
+            rect(this.body[i].x, this.body[i].y, 1, 1)
+        }
+    }
+
+    show2(){
+        for(let i = 0; i < this.body.length; i++) {
+            fill(255, 0, 0);
             noStroke();
             rect(this.body[i].x, this.body[i].y, 1, 1)
         }
