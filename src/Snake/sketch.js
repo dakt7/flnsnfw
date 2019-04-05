@@ -105,7 +105,7 @@ function keyPressed() {
     }
     if (keyCode === 32) {
         snake.body.shift();
-        frameRate(50);
+        frameRate(30);
         (function(){
             function speedUp() {
                 frameRate(10);
@@ -204,14 +204,12 @@ function draw() {
 
 
     if (snake.endGame()) {
-        print("END GAME");
-        background(0, 0, 255);
+        alert("GAME OVER");
         noLoop();
     }
 
     if (snake2.endGame()) {
-        print("END GAME");
-        background(0, 0, 255);
+        alert("GAME OVER");
         noLoop();
     }
 
@@ -226,6 +224,7 @@ function draw() {
 
 
 }
+
 
 
 
